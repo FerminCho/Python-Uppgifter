@@ -47,9 +47,3 @@ for row in items:
 cost = str(full_cost).rstrip('0').rstrip('.')
 print("-" * 28)
 print("TOTAL: " + cost + ":-")
-
-#1000000000
-
-#6250000 HOT DOGS   130937500
-#12500000 VEGAN     436875000
-#40000000 DRINKS    558000000

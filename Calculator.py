@@ -1,7 +1,5 @@
 import os
 
-math = 1
-
 def choose_math():
     while True:
         math = input("> ")
