@@ -18,7 +18,7 @@ while True:
         continue
 
     cardinality += 1
-    sum += int(input_value)
+    sum += float(input_value)
 
 print("-------------------")
 print("Cardinality: " + str(cardinality))

@@ -28,9 +28,6 @@ vegan_hotdogs_cost = number_of_vegan_hotdog_packages * product_cost["Vegan hotdo
 drinks_cost = number_of_students * product_cost["Drink"]
 
 full_cost = math.ceil((hotdogs_cost + vegan_hotdogs_cost + drinks_cost) * 100) / 100
-print(hotdogs_cost)
-print(vegan_hotdogs_cost)
-print(drinks_cost)
 
 items = [
     {"amount": number_of_hotdog_packages, "item": "HOT DOGS", "cost": round(hotdogs_cost, 2)},
