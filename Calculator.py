@@ -1,4 +1,7 @@
 import os
+from xml.dom.minidom import NamedNodeMap
+
+saved_calcs = []
 
 def choose_math():
     while True:
@@ -7,6 +10,7 @@ def choose_math():
             print("Unknown operation " + (math))
             input("Press Enter to continue...")
             os.system('cls')
+            show_saves()
         else:
             break
     return math
@@ -31,11 +35,13 @@ def set_b():
         value = input("b = ")
     return value
 
+def show_saves():
+    for calc_str in saved_calcs:
+        print(calc_str)
+
 def main():
-    saved_calcs = []
     while True:
-        for calc_str in saved_calcs:
-            print(calc_str)
+        show_saves()
         print("\n")
 
         current_calc = choose_math()
@@ -61,7 +67,12 @@ def main():
             saved_calcs.append(text)
             os.system('cls')
         elif current_calc == "div":
-            ans = a / b
+            if b == 0 and a == 0:
+                ans = "NaN"
+            elif b == 0:
+                ans = "Infinity"
+            else:
+                ans = a / b
             text = str(a) + " / " + str(b) + " = " + str(ans)
             print(text)
             saved_calcs.append(text)
