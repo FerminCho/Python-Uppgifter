@@ -39,6 +39,7 @@ def main():
             else:
                 check_box = "[ ]"
             print(str(index) + " | " + check_box + " " + entry["name"])
+            index += 1
 
         cmd = input("> ")
         cmd = cmd.lower()
