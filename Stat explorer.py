@@ -7,7 +7,7 @@ if int(year) < 1980 or int(year) > 2018:
     exit()
 
 home_score = input("Home score: ")
-away_score = input("Away score: ")#te
+away_score = input("Away score: ")
 
 url = "http://football-frenzy.s3-website.eu-north-1.amazonaws.com/api/"
 season = requests.get(url + str(year)).json()
